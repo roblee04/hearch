@@ -1,57 +1,24 @@
-# microsearch
-
-`microsearch` is a minimal Python search engine designed for simplicity and efficiency. The project allows users to perform searches using Python, and it also provides an option to deploy a FastAPI app with an endpoint and a website for a user-friendly experience. It has been designed to provide users with a straightforward way to deploy their own search engine and search documents from their favorite blogs. The project includes a script for asynchronously downloading all the posts from a series of RSS feeds. 
-
-## Features:
-- **Python Implementation**: `microsearch` is entirely implemented in Python, making it accessible and easy to understand for developers with varying levels of experience.
-
-- **FastAPI App Deployment**: The project provides an option to deploy a FastAPI app, allowing users to interact with the search engine through a dedicated endpoint and a user-friendly website.
-
-- **RSS Feed Crawling Script**: To populate the search engine with data, `microsearch` offers a script for asynchronously downloading posts from a series of RSS feeds. This feature ensures that users can conveniently aggregate content from their chosen blogs.
+# Computational Creativity Project
 
 
-## Getting started
+Heavy modifications were made.
 
-The first step is to download this repo
+--> more crawling capabilites
 
-```bash
-git clone https://github.com/alexmolas/microsearch.git
-```
+Depth - How many layers of links to crawl through. You must set at least a depth of 1 if you want to crawl any hyperlinks. Setting a negative value = no limit. Be careful about that.
 
-Then, I recommend you install everything in a virtual environment. I usually use `virtualenv` but any other environment manager should work.
+Pages - How many pages to crawl on each link layer (depth). They will be randomly selected. You must set at least 1 if you want to crawl any hyperlinks. Setting a negative value = no limit. Be careful about that.
 
-```bash
-virtualenv -p python3.10 venv
-```
+Type - Indicates if you want to only crawl links local to the website, or links external to the website, or both. 
 
-activate the environment
+--> Metadata Scraping
 
-```bash
-source venv/bin/activate
-```
+--> Ranking augmentation
+- originall just bm25. Now bm25 + other things
 
-and install the package and the dependencies
+Dataset:
+https://github.com/MarginaliaSearch/PublicData/tree/master/sets
 
-```bash
-pip install .
-```
-
-## Crawl data
-
-Now we need to download the content of the blogs. I'm sharing [here](https://github.com/alexmolas/microsearch/blob/main/feeds.txt) a list of feed examples, but please feel free to use your own. To download the content do
-
-```bash
-python download_content.py --feed-path feeds.txt
-```
-
-## Launch app
-
-Finally, once the content is crawled and stored you can run the app as
-
-
-```bash
-python -m app.app --data-path output.parquet
-```
-
-and if you navigate to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) you'll be able to query the engine.
-
+References:
+https://github.com/MarginaliaSearch/MarginaliaSearch/tree/master
+https://wiby.me/about/guide.html 

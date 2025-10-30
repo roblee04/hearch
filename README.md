@@ -14,7 +14,7 @@ Type - Indicates if you want to only crawl links local to the website, or links 
 --> Metadata Scraping
 
 --> Ranking augmentation
-- originall just bm25. Now bm25 + other things
+- originally just bm25. Now bm25 + other things
 
 Dataset:
 https://github.com/MarginaliaSearch/PublicData/tree/master/sets

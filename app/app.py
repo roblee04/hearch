@@ -23,7 +23,9 @@ app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
 def get_top_results(results_dict: dict, n: int) -> dict:
     """Sorts and returns the top N results based on score."""
     # The engine already returns scores, so we just sort and slice
-    sorted_results = sorted(results_dict.items(), key=lambda x: x[1], reverse=True)
+
+    # lower score is better, reverse = False
+    sorted_results = sorted(results_dict.items(), key=lambda x: x[1], reverse=False)
     return dict(sorted_results[:n])
 
 

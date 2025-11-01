@@ -6,6 +6,55 @@ Welcome to Robin and Harsh's serendipity / surprise based search engine!
 
 Though this will not be your daily driver of a search engine, I hope that the results you query will be interesting.
 
+# Running the Project
+
+## Getting started
+
+The first step is to download this repo
+
+```bash
+git clone https://github.com/roblee04/hearch.git
+```
+
+Then, I recommend you install everything in a virtual environment. I usually use `virtualenv` but any other environment manager should work.
+
+```bash
+virtualenv -p python3.10 venv
+```
+
+activate the environment
+
+```bash
+source venv/bin/activate
+```
+
+and install the package and the dependencies
+
+```bash
+pip install .
+```
+
+## Expand and Crawl data
+
+Expansion step:
+```bash
+python crawler.py --input-file seeds.txt --output-file out_urls.txt --type both --depth 5 --pages 10
+```
+
+Download content to parquet:
+```bash
+python download_content.py --feed-path out_urls.txt
+```
+
+## Launch app
+
+Finally, once the content is crawled and stored you can run the app as
+
+```bash
+python -m app.app --data-path output_with_metadata.parquet
+```
+
+and if you navigate to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) you'll be able to query the engine.
 
 # About
 
@@ -22,6 +71,11 @@ However, that's not to say that no work was done on the code. In order to accomo
 - Query expansion with an LLM
 
 As for how effective each point is and to what degree, I don't know quantitatively. However this can be further explored if we wanted to through some ablation study.
+
+# Limitations
+- Seed urls aren't super well established, hand picked
+- Is slow (indexing)
+- Relevance (onegram reverse index table), doesnt do well on multiword queries
 
 # Changes made to microsearch
 

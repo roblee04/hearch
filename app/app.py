@@ -13,6 +13,7 @@ script_dir = pathlib.Path(__file__).resolve().parent
 templates_path = script_dir / "templates"
 static_path = script_dir / "static"
 
+# Querying thru 3000 items is super slow, reminder to add @cache decorator to help with this
 
 app = FastAPI()
 engine = SearchEngine()

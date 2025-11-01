@@ -30,7 +30,8 @@ As for how effective each point is and to what degree, I don't know quantitative
 Crawls upon urls that are given to it. This means exploring + indexing more hyperlinks, nested links, and pages that are available on the initial url. This did not exist in the code originally.
 
 ### Usage
-\$ python crawler.py input.txt output.txt --type local --depth 1 --pages 5
+\$ python crawler.py --input-file input.txt --output-file output.txt --type both --depth 5 --pages 10
+
 
 ### Options
 **Depth** -- *(# of depth)* 

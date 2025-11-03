@@ -56,6 +56,102 @@ python -m app.app --data-path output_with_metadata.parquet
 
 and if you navigate to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) you'll be able to query the engine.
 
+## Query Expansion with LLMs (Optional but Recommended)
+
+Hearch supports **query expansion** using LLMs to generate alternative, creative search queries that help discover more serendipitous results. This feature can work with either **Ollama** (local, free) or **OpenAI** (API-based).
+
+### Option 1: Using Ollama (Recommended - Free & Local)
+
+[Ollama](https://ollama.ai/) allows you to run LLMs locally on your machine for free.
+
+#### Step 1: Install Ollama
+
+Download and install Ollama from [https://ollama.ai/](https://ollama.ai/)
+
+For macOS/Linux:
+```bash
+curl -fsSL https://ollama.ai/install.sh | sh
+```
+
+#### Step 2: Download a Model
+
+Pull the default model (llama3.2):
+```bash
+ollama pull llama3.2
+```
+
+Or use any other model you prefer:
+```bash
+ollama pull mistral
+ollama pull llama2
+```
+
+#### Step 3: Start Ollama
+
+Ollama runs as a service on port 11434 by default:
+```bash
+ollama serve
+```
+
+#### Step 4: Configure Hearch (Optional)
+
+By default, Hearch will automatically detect and use Ollama if it's running. You can customize the settings with environment variables:
+
+```bash
+export OLLAMA_URL="http://localhost:11434/api/generate"  # Default
+export OLLAMA_MODEL="llama3.2"  # Default, or use "mistral", "llama2", etc.
+```
+
+#### Step 5: Run the App
+
+```bash
+python -m app.app --data-path output_with_metadata.parquet
+```
+
+The app will automatically use Ollama for query expansion if it's running!
+
+### Option 2: Using OpenAI API
+
+If you prefer to use OpenAI's API (requires API key):
+
+#### Step 1: Set your API Key
+
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+```
+
+#### Step 2: Optional Configuration
+
+```bash
+export OPENAI_MODEL="gpt-3.5-turbo"  # Default, or use "gpt-4", etc.
+export OPENAI_API_BASE="https://api.openai.com/v1"  # Default
+```
+
+#### Step 3: Run the App
+
+```bash
+python -m app.app --data-path output_with_metadata.parquet
+```
+
+### Testing Query Expansion
+
+You can test query expansion independently:
+
+```bash
+python src/microsearch/query_expansion.py
+```
+
+This will run a test query ("potatoes") and show the expanded variations.
+
+### How It Works
+
+When you search for a query like "potatoes", the query expansion feature will:
+1. Generate 4-5 creative alternative queries (e.g., "potato cultivation history", "unexpected uses for potatoes")
+2. Search for all queries in parallel
+3. Merge and rank the results to provide more diverse and serendipitous discoveries
+
+The system automatically falls back to simpler expansion methods if no LLM is available.
+
 # About
 
 The project was adapted from Alex Molas's *microsearch* repository, which served as the basis for basic crawling, indexing, ranking, and serving functionalities.

@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hearch - Serendipity Search{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
     {% include "navbar.html" %}
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}microsearch{% endblock %}</title>
-        <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        <h1>{% block heading %}microsearch{% endblock %}</h1>
-
+    
+    <main>
         {% block content %}
         {% endblock %}
-    </body>
+    </main>
+    
+    <footer class="footer-custom">
+        <div class="container text-center">
+            <p class="mb-0">Discover the unexpected, one search at a time.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

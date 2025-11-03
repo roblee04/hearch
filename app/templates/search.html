@@ -1,20 +1,66 @@
 {% extends "base.html" %}
-{% block heading %} {{ posts|length }} indexed posts {% endblock %}
-{% block content %}
-<body>
-    <form id="searchForm" method="post">
-        <label for="query">Enter your search query:</label>
-        <input type="text" id="query" name="query" required>
-        <button type="submit">Search</button>
-    </form>
+{% block title %}Hearch - Search the Unexpected{% endblock %}
 
-    <script>
-        document.getElementById("searchForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            var queryValue = document.getElementById("query").value;
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7 text-center">
+                <h1 class="hero-title animate-fade-in">
+                    Discover the
+                    <span class="gradient-text">Unexpected</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-in-delay">
+                    A serendipity-focused search engine exploring {{ posts|length }} curated documents
+                </p>
+                
+                <div class="search-container animate-slide-up">
+                    <form id="searchForm" class="search-form">
+                        <div class="input-group search-input-group">
+                            <input 
+                                type="text" 
+                                id="query" 
+                                name="query" 
+                                class="form-control search-input" 
+                                placeholder="What are you curious about?"
+                                required
+                                autocomplete="off"
+                            >
+                            <button class="btn btn-search" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="feature-tags animate-fade-in-delay-2">
+                    <span class="feature-tag">AI Query Expansion</span>
+                    <span class="feature-tag">BM25 Ranking</span>
+                    <span class="feature-tag">Metadata Scoring</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var queryValue = document.getElementById("query").value;
+        if (queryValue.trim()) {
             window.location.href = "/results/" + encodeURIComponent(queryValue);
-        });
-    </script>
-</body>
-</html>
+        }
+    });
+    
+    // Add focus animation
+    const searchInput = document.getElementById("query");
+    searchInput.addEventListener("focus", function() {
+        this.parentElement.classList.add("input-focused");
+    });
+    searchInput.addEventListener("blur", function() {
+        this.parentElement.classList.remove("input-focused");
+    });
+</script>
 {% endblock %}

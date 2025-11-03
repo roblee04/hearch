@@ -1,0 +1,88 @@
+✅ QUERY EXPANSION FEATURE IMPLEMENTED!
+
+==================================================
+WHAT WAS ADDED:
+==================================================
+
+1. NEW FILE: src/microsearch/query_expansion.py
+   - Generates alternative queries using LLM (Ollama/OpenAI) or fallback templates
+   - Example: "potatoes" → ["how to make potato salad", "best potato recipes", ...]
+
+2. MODIFIED: app/app.py
+   - Added query expansion with weighted result combination
+   - Original query weight: 40%
+   - Each expanded query weight: 15%
+   - Configuration flags to enable/disable
+
+3. MODIFIED: app/templates/results.html
+   - Shows expanded queries used (click to expand)
+   - Displays which queries contributed to results
+
+4. NEW FILE: QUERY_EXPANSION_SETUP.md
+   - Complete setup guide for Ollama or OpenAI
+   - Installation instructions and troubleshooting
+
+==================================================
+HOW IT WORKS:
+==================================================
+
+User searches: "potatoes"
+    ↓
+System generates 4 alternative queries:
+    1. "how to make potato salad"
+    2. "best potato recipes"  
+    3. "potato nutrition facts"
+    4. "growing potatoes at home"
+    ↓
+Searches all 5 queries (original + 4 expansions)
+    ↓
+Combines results with weights:
+    - Original: 40%
+    - Each expansion: 15%
+    ↓
+Returns top 10 combined results
+
+==================================================
+CURRENT STATUS:
+==================================================
+
+✅ Server running on http://127.0.0.1:8000/
+✅ Query expansion ENABLED (using fallback mode)
+✅ 580 documents indexed
+✅ Ready to test!
+
+==================================================
+CONFIGURATION (in app/app.py):
+==================================================
+
+ENABLE_QUERY_EXPANSION = True  # Set False to disable
+NUM_EXPANDED_QUERIES = 4       # Number of alternative queries
+ORIGINAL_QUERY_WEIGHT = 0.40   # Original query weight (40%)
+EXPANDED_QUERY_WEIGHT = 0.15   # Per expansion weight (15%)
+
+==================================================
+TO ENABLE LLM (Optional - Currently using fallback):
+==================================================
+
+Option 1 - Ollama (Free, Local):
+    brew install ollama
+    ollama serve
+    ollama pull llama3.2
+
+Option 2 - OpenAI:
+    export OPENAI_API_KEY="your-key"
+
+See QUERY_EXPANSION_SETUP.md for details!
+
+==================================================
+TEST IT NOW:
+==================================================
+
+1. Open: http://127.0.0.1:8000/
+2. Search for: "potatoes" or "philosophy" or "ai"
+3. Click "Query Expansion Active" to see alternate queries
+4. Results will be from all queries combined!
+
+==================================================
+
+

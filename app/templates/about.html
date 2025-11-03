@@ -1,22 +1,116 @@
 {% extends "base.html" %}
-{% block title %} About {% endblock %}
-{% block heading %}{% endblock %}
+{% block title %}About - Hearch{% endblock %}
+
 {% block content %}
-
-Hi! This is <a href="https://www.alexmolas.com">@alexmolas</a> Welcome to my side project. I've been working these last months as a search data scientist at Wallapop, and I've been learning a lot about the topic.
-In this project I wanted to put into practice some of the theory I learned these weeks. In particular
-
-<br>
-<br>
-
-<li>How to download a collection of documents using python `async` code.</li>
-<li>How to create an inverse index.</li>
-<li>How to populate an inverse index for a catalog of documents.</li>
-<li>How to compute BM25 given a query and a catalog.</li>
-<li>How to put everything together and deploy it using FastAPI.</li>
-
-<br>
-
-This is not meant as a production ready project. This project exists only to showcase some of the things I learnt during my first months at Wallapop. 
-
+<div class="about-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                
+                <div class="about-header animate-fade-in text-center mb-5">
+                    <h1 class="about-title">
+                        About <span class="gradient-text">Hearch</span>
+                    </h1>
+                    <p class="about-subtitle">
+                        A serendipity-focused search engine for curious minds
+                    </p>
+                </div>
+                
+                <div class="about-content animate-slide-up">
+                    <div class="about-card">
+                        <h2 class="section-title">What is Hearch?</h2>
+                        <p>
+                            Hearch is an experimental search engine inspired by <a href="https://www.alexmolas.com" target="_blank">@alexmolas</a>' microsearch and the philosophy of 
+                            <a href="https://www.marginalia.nu/" target="_blank">Marginalia Search</a>. 
+                            It's designed to surface unexpected and interesting content from a curated collection of documents.
+                        </p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h2 class="section-title">Key Features</h2>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>BM25 Ranking</h3>
+                                    <p>Industry-standard Okapi BM25 algorithm for text relevance scoring</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                                        <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>Metadata Scoring</h3>
+                                    <p>Marginalia-inspired bonuses and penalties based on document quality signals</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>AI Query Expansion</h3>
+                                    <p>LLM-powered generation of alternative search queries for broader discovery</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.152zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>Async Web Crawling</h3>
+                                    <p>High-performance asynchronous document discovery and indexing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h2 class="section-title">Technology Stack</h2>
+                        <ul class="tech-list">
+                            <li><strong>FastAPI</strong> - Modern Python web framework</li>
+                            <li><strong>BM25</strong> - Okapi ranking algorithm</li>
+                            <li><strong>OpenAI API</strong> - Query expansion with LLMs</li>
+                            <li><strong>Pandas</strong> - Data processing and indexing</li>
+                            <li><strong>Bootstrap 5</strong> - Responsive UI framework</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h2 class="section-title">Philosophy</h2>
+                        <p>
+                            Unlike commercial search engines that prioritize SEO and advertising, Hearch focuses on 
+                            <strong>serendipitous discovery</strong>. It rewards quality signals like link topology, 
+                            content length, and publication date while penalizing commercial markers like tracking scripts 
+                            and ad networks.
+                        </p>
+                        <p>
+                            This is an experimental project exploring alternative approaches to web search and information retrieval.
+                        </p>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="/" class="btn btn-primary btn-lg">Start Searching</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

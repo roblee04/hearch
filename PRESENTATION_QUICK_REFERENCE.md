@@ -1,12 +1,12 @@
 # Hearch Presentation - Quick Reference Guide
 
-## 🎤 Elevator Pitch (30 seconds)
+## Elevator Pitch (30 seconds)
 
 **Hearch is a search engine designed for serendipity, not just relevance. It uses LLMs to creatively expand your queries into unexpected angles, then ranks results to favor unique, quality content over commercial spam. Instead of showing you what you already know exists, it helps you discover what you didn't know you were looking for.**
 
 ---
 
-## 💡 Core Messages (What to Emphasize)
+## Core Messages (What to Emphasize)
 
 ### 1. **The Problem is Predictability**
 - Traditional search engines are too good at giving you exactly what you ask for
@@ -46,7 +46,7 @@
 
 ---
 
-## 🎯 Key Statistics & Facts to Mention
+## Key Statistics & Facts to Mention
 
 - **Query Expansion**: 1 query → 4-5 creative alternatives
 - **Temperature**: 0.8 (high = more creative)
@@ -57,7 +57,7 @@
 
 ---
 
-## 📊 Perfect Demo Sequence
+## Perfect Demo Sequence
 
 ### Demo 1: Query Expansion (2 minutes)
 ```bash
@@ -106,7 +106,7 @@ Final Score = √[(500 + 10×Penalties) / (1 + Relevance)]
 
 ---
 
-## 🗣️ Answers to Expected Questions
+## Answers to Expected Questions
 
 ### Q: "How is this different from Google's 'I'm Feeling Lucky'?"
 **A:** "Google's button just picks the #1 result - still optimizing for relevance. We're fundamentally changing what we optimize for. Our entire ranking algorithm is designed for surprise, not accuracy."
@@ -131,7 +131,7 @@ Final Score = √[(500 + 10×Penalties) / (1 + Relevance)]
 
 ---
 
-## 🎨 Computational Creativity Buzzwords to Use
+## Computational Creativity Buzzwords to Use
 
 Use these naturally throughout your presentation:
 
@@ -148,7 +148,7 @@ Use these naturally throughout your presentation:
 
 ---
 
-## 🚀 Strong Opening Lines (Choose One)
+## Strong Opening Lines (Choose One)
 
 1. "What if your search engine was trying to surprise you, not just answer your question?"
 
@@ -162,7 +162,7 @@ Use these naturally throughout your presentation:
 
 ---
 
-## 🎬 Strong Closing Lines (Choose One)
+## Strong Closing Lines (Choose One)
 
 1. "In a world of algorithmic echo chambers, we're building tools for algorithmic exploration."
 
@@ -176,7 +176,7 @@ Use these naturally throughout your presentation:
 
 ---
 
-## ⏱️ Timing Suggestions
+## Timing Suggestions
 
 **For 10-minute presentation:**
 - Introduction & Problem (2 min)
@@ -204,23 +204,23 @@ Use these naturally throughout your presentation:
 
 ---
 
-## 📝 Slide Flow Checklist
+## Slide Flow Checklist
 
 Make sure your presentation flows like this:
 
-1. ✅ **Hook** - Start with interesting question/problem
-2. ✅ **Problem** - Why traditional search is predictable
-3. ✅ **Solution** - What Hearch does differently
-4. ✅ **How It Works** - Technical overview (3 mechanisms)
-5. ✅ **Demo** - Show it working (most important!)
-6. ✅ **Creativity** - Connect to computational creativity concepts
-7. ✅ **Impact** - Why this matters
-8. ✅ **Future** - Where this could go
-9. ✅ **Conclusion** - Memorable takeaway
+1. **Hook** - Start with interesting question/problem
+2. **Problem** - Why traditional search is predictable
+3. **Solution** - What Hearch does differently
+4. **How It Works** - Technical overview (3 mechanisms)
+5. **Demo** - Show it working (most important!)
+6. **Creativity** - Connect to computational creativity concepts
+7. **Impact** - Why this matters
+8. **Future** - Where this could go
+9. **Conclusion** - Memorable takeaway
 
 ---
 
-## 🎯 What to Practice
+## What to Practice
 
 1. **Query expansion explanation** (30 seconds)
    - "The LLM takes your query and generates creative alternatives"
@@ -242,7 +242,7 @@ Make sure your presentation flows like this:
 
 ---
 
-## 💪 Confidence Boosters
+## Confidence Boosters
 
 **You built something real that works.**
 - Not just a paper concept
@@ -268,7 +268,7 @@ Make sure your presentation flows like this:
 
 ---
 
-## 🎁 Bonus: One-Liners for Each Slide
+## Bonus: One-Liners for Each Slide
 
 Use these as slide subtitles or transition phrases:
 
@@ -285,7 +285,7 @@ Use these as slide subtitles or transition phrases:
 
 ---
 
-## 📱 Last-Minute Checklist
+## Last-Minute Checklist
 
 **30 minutes before:**
 - [ ] Ollama running (`ollama serve`)
@@ -303,7 +303,7 @@ Use these as slide subtitles or transition phrases:
 
 ---
 
-## 🌟 Remember
+## Remember
 
 **Your project is genuinely creative and novel.**
 
@@ -314,11 +314,11 @@ You're not just applying existing techniques - you're combining them in new ways
 
 This challenges decades of search engine design. That's bold, that's creative, and that's exactly what computational creativity is about.
 
-**You've got this! 🚀**
+**You've got this!**
 
 ---
 
-## 🔗 Quick Links for Reference
+## Quick Links for Reference
 
 - **GitHub**: https://github.com/roblee04/hearch
 - **Marginalia Search**: https://search.marginalia.nu/
@@ -328,5 +328,5 @@ This challenges decades of search engine design. That's bold, that's creative, a
 
 ---
 
-Good luck with your presentation! You've built something impressive. 🎉
+Good luck with your presentation! You've built something impressive.
 

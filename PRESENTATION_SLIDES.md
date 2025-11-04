@@ -30,10 +30,10 @@ November 2025
 ## SLIDE 3: What is Hearch?
 
 A search engine that prioritizes:
-- 🎲 **Serendipity** - Unexpected but valuable discoveries
-- 🌈 **Diversity** - Multiple perspectives and angles
-- ✨ **Quality** - Well-written, thoughtful content
-- 🎨 **Creativity** - Alternative viewpoints
+- **Serendipity** - Unexpected but valuable discoveries
+- **Diversity** - Multiple perspectives and angles
+- **Quality** - Well-written, thoughtful content
+- **Creativity** - Alternative viewpoints
 
 **Core Philosophy**: The best results aren't always the most obvious ones.
 
@@ -92,7 +92,7 @@ A search engine that prioritizes:
        ▼
 ┌──────────────────────────────────┐
 │  Merge & Rank with Diversity     │
-│  Serendipitous Results ✨        │
+│  Serendipitous Results           │
 └──────────────────────────────────┘
 ```
 
@@ -106,10 +106,10 @@ A search engine that prioritizes:
 
 | Traditional Search | Hearch |
 |-------------------|---------|
-| ✓ High traffic | ✓ Unique content |
-| ✓ SEO optimized | ✓ Personal blogs |
-| ✓ Commercial sites | ✗ Anti-ads penalty |
-| ✓ Wikipedia first | ✓ Diverse sources |
+| High traffic | Unique content |
+| SEO optimized | Personal blogs |
+| Commercial sites | Anti-ads penalty |
+| Wikipedia first | Diverse sources |
 
 ### The Formula
 ```
@@ -149,7 +149,7 @@ Final Score = √[(500 + Penalties) / (1 + Relevance)]
          │
          ▼
 ┌─────────────────────┐
-│  🎨 Serendipitous   │
+│  Serendipitous      │
 │     Results         │
 └─────────────────────┘
 ```
@@ -233,10 +233,10 @@ Final Score = √[(500 + Penalties) / (1 + Relevance)]
 | **Frontend** | Modern HTML/CSS/JS |
 
 ### Key Features:
-- ✅ Local LLM support (Ollama) - Free!
-- ✅ Automatic fallback if no LLM
-- ✅ Transparent ranking algorithm
-- ✅ Extensible and modular
+- Local LLM support (Ollama) - Free!
+- Automatic fallback if no LLM
+- Transparent ranking algorithm
+- Extensible and modular
 
 ---
 
@@ -284,10 +284,10 @@ Neither fully automated nor fully manual
 ## SLIDE 14: Evaluation
 
 ### Qualitative Success Metrics:
-✓ **Surprise** - "I didn't expect this result!"  
-✓ **Diversity** - Multiple perspectives represented  
-✓ **Quality** - Well-written, thoughtful content  
-✓ **Discovery** - "I learned something new"  
+- **Surprise** - "I didn't expect this result!"  
+- **Diversity** - Multiple perspectives represented  
+- **Quality** - Well-written, thoughtful content  
+- **Discovery** - "I learned something new"  
 
 ### Potential Quantitative Metrics:
 - Result diversity score (cosine distance)
@@ -342,15 +342,15 @@ Neither fully automated nor fully manual
 ## SLIDE 17: Future Directions
 
 ### Short-term:
-- 🎯 Adaptive serendipity (learn user preferences)
-- 📊 User study on discovery effectiveness
-- 🔄 Real-time crawling improvements
+- Adaptive serendipity (learn user preferences)
+- User study on discovery effectiveness
+- Real-time crawling improvements
 
 ### Long-term:
-- 🖼️ Multi-modal creativity (images, video, audio)
-- 🤝 Collaborative filtering ("similar surprises")
-- 🌐 Meta-search layer (creative proxy for Google/Bing)
-- 🎮 Gamification (serendipity scores, discovery badges)
+- Multi-modal creativity (images, video, audio)
+- Collaborative filtering ("similar surprises")
+- Meta-search layer (creative proxy for Google/Bing)
+- Gamification (serendipity scores, discovery badges)
 
 ### Research Questions:
 - Can we quantify serendipity?

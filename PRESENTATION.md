@@ -3,7 +3,7 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 **Hearch** is a serendipity-focused search engine designed to surface surprising, creative, and unexpected search results rather than just the most "relevant" ones. Unlike traditional search engines that optimize purely for relevance and popularity, Hearch embraces computational creativity principles to help users discover content they didn't know they were looking for.
 
@@ -23,7 +23,7 @@ Hearch optimizes for:
 
 ---
 
-## 🧠 Computational Creativity Aspects
+## Computational Creativity Aspects
 
 ### 1. **Creative Query Expansion with LLMs**
 
@@ -80,7 +80,7 @@ Results from multiple expanded queries are merged and re-ranked, creating a **co
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -172,7 +172,7 @@ Results from multiple expanded queries are merged and re-ranked, creating a **co
 
 ---
 
-## 🎨 Key Computational Creativity Techniques
+## Key Computational Creativity Techniques
 
 ### 1. **Conceptual Expansion (Exploratory Creativity)**
 
@@ -220,7 +220,7 @@ expand_query("machine learning")
 
 ---
 
-## 📊 Technical Implementation
+## Technical Implementation
 
 ### Core Technologies
 
@@ -276,7 +276,7 @@ def expand_query(query):
 
 ---
 
-## 🎯 How This Advances Computational Creativity
+## How This Advances Computational Creativity
 
 ### 1. **Creativity as a Search Goal** (Not Just an Accident)
 
@@ -314,7 +314,7 @@ Neither fully automated nor fully manual:
 
 ---
 
-## 📈 Evaluation & Effectiveness
+## Evaluation & Effectiveness
 
 ### Qualitative Goals (Hard to Measure, Easy to Experience)
 
@@ -339,7 +339,7 @@ Neither fully automated nor fully manual:
 
 ---
 
-## 🚀 Future Directions
+## Future Directions
 
 ### 1. **Adaptive Serendipity**
 Learn user preferences for surprise vs. relevance over time.
@@ -358,7 +358,7 @@ Apply creative expansion to existing search engines (Google, Bing) as a proxy la
 
 ---
 
-## 🎓 Conclusion
+## Conclusion
 
 **Hearch demonstrates that:**
 
@@ -372,7 +372,7 @@ Apply creative expansion to existing search engines (Google, Bing) as a proxy la
 
 ---
 
-## 📚 References & Inspiration
+## References & Inspiration
 
 - **MarginaliaSearch**: Anti-commercial search engine with quality focus
   - https://search.marginalia.nu/
@@ -386,7 +386,7 @@ Apply creative expansion to existing search engines (Google, Bing) as a proxy la
 
 ---
 
-## 💻 Technical Demo Points
+## Technical Demo Points
 
 ### 1. **Live Query Expansion Demo**
 ```bash
@@ -405,7 +405,7 @@ Compare results with Google to show difference in discovery potential.
 
 ---
 
-## 🏆 Key Takeaways for Presentation
+## Key Takeaways for Presentation
 
 1. **Problem**: Traditional search is too predictable and commercialized
 2. **Solution**: Computational creativity through serendipity-optimized search
@@ -417,7 +417,7 @@ Compare results with Google to show difference in discovery potential.
 
 ---
 
-## 📧 Contact & Links
+## Contact & Links
 
 - **GitHub**: https://github.com/roblee04/hearch
 - **Live Demo**: [Include if deployed]

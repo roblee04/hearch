@@ -52,3 +52,7 @@ Your server is running at: http://127.0.0.1:8000/
 After setting up your API key, search for something like "python" and click on the "Query Expansion Active" section to see the AI-generated alternative queries.
 
 
+
+
+
+

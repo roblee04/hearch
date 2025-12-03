@@ -140,3 +140,7 @@ ollama pull llama3.2     # Better quality (2GB)
 - **Disable if needed:** Set `ENABLE_QUERY_EXPANSION = False` in app.py
 
 
+
+
+
+

@@ -12,7 +12,24 @@
                     <h1 class="results-title">
                         Results for <span class="gradient-text">"{{ query }}"</span>
                     </h1>
-                    <p class="results-count">{{ results|length }} discoveries found</p>
+                    <p class="results-count">
+                        {{ results|length }} discoveries found
+                        {% if ai_insights %}
+                        <span class="ai-badge" title="Results ranked by AI for interestingness">
+                            🤖 AI-Curated
+                        </span>
+                        {% endif %}
+                    </p>
+                    
+                    <!-- Filter Toggle -->
+                    <div class="filter-toggle">
+                        <a href="/results/{{ query }}" class="filter-btn {% if not ai_only %}active{% endif %}">
+                            All Results
+                        </a>
+                        <a href="/results/{{ query }}?ai_only=true" class="filter-btn {% if ai_only %}active{% endif %}">
+                            🤖 AI Only
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Query Expansion Info -->
@@ -52,15 +69,64 @@
                 <div class="results-list animate-slide-up">
                     {% if results %}
                         {% for url, score in results.items() %}
-                        <div class="result-card">
+                        <div class="result-card {% if url in ai_generated_urls %}ai-generated-card{% endif %}">
                             <div class="result-header">
-                                <a href="{{ url }}" target="_blank" class="result-url">
-                                    {{ url }}
-                                </a>
+                                <div class="result-title-section">
+                                    {% if url in ai_generated_urls %}
+                                    <span class="ai-generated-badge" title="AI-Generated Result">
+                                        🤖 AI Discovery
+                                    </span>
+                                    {% endif %}
+                                    <a href="{{ url }}" target="_blank" class="result-url">
+                                        {{ url }}
+                                    </a>
+                                </div>
                                 <span class="result-score" title="Relevance Score">
                                     {{ "%.4f"|format(score) }}
                                 </span>
                             </div>
+                            
+                            {% if metadata and url in metadata %}
+                                {% set meta = metadata[url] %}
+                                {% if meta.title and url in ai_generated_urls %}
+                                <div class="result-meta">
+                                    <strong class="result-title-text">{{ meta.title }}</strong>
+                                    {% if meta.category %}
+                                    <span class="category-badge">{{ meta.category }}</span>
+                                    {% endif %}
+                                    {% if meta.authority_score %}
+                                    <span class="authority-badge" title="Authority Score">⭐ {{ meta.authority_score }}/10</span>
+                                    {% endif %}
+                                </div>
+                                {% if meta.matched_keywords %}
+                                <div class="matched-keywords">
+                                    <small>✓ Matched keywords ({{ meta.keyword_count }}): 
+                                        {% for kw in meta.matched_keywords[:8] %}
+                                            <span class="keyword-tag">{{ kw }}</span>
+                                        {% endfor %}
+                                        {% if meta.keyword_count > 8 %}
+                                            <span class="keyword-more">+{{ meta.keyword_count - 8 }} more</span>
+                                        {% endif %}
+                                    </small>
+                                </div>
+                                {% endif %}
+                                {% if meta.content %}
+                                <div class="result-description">
+                                    {{ meta.content }}
+                                </div>
+                                {% endif %}
+                                {% endif %}
+                            {% endif %}
+                            
+                            {% if ai_insights and url in ai_insights %}
+                            <div class="ai-insight">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="me-1" viewBox="0 0 16 16">
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                </svg>
+                                <em>{{ ai_insights[url] }}</em>
+                            </div>
+                            {% endif %}
+                            
                             <div class="result-actions">
                                 <a href="{{ url }}" target="_blank" class="btn btn-sm btn-visit">
                                     Visit

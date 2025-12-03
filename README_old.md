@@ -1,4 +1,4 @@
-# microsearch
+ # microsearch
 
 `microsearch` is a minimal Python search engine designed for simplicity and efficiency. The project allows users to perform searches using Python, and it also provides an option to deploy a FastAPI app with an endpoint and a website for a user-friendly experience. It has been designed to provide users with a straightforward way to deploy their own search engine and search documents from their favorite blogs. The project includes a script for asynchronously downloading all the posts from a series of RSS feeds. 
 
